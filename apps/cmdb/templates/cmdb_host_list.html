@@ -1,0 +1,10 @@
+{% extends "admin/change_list.html" %}
+{% block object-tools-items %}
+    <a class="btn btn-info pull-left" href="{% url 'admin:scan_host' %}" style="vertical-align: middle">扫描主机</a>
+    <a class="btn" href="import/" class="import_link">导入</a>
+    <a class="btn" href="export/?" class="export_link">导出</a>
+    <a href="/admin/cmdb/host/add/" class="btn btn-success">
+                    <i class="icon-plus-sign icon-white"></i>
+                    增加 主机
+            </a>
+{% endblock %}

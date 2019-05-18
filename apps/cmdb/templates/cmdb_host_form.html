@@ -1,0 +1,16 @@
+{% extends "admin/change_form.html" %}
+{% block submit_buttons_bottom %}
+
+    <button type="submit" name="_refresh" class="btn">刷新</button>
+    {{ block.super }}
+{% endblock %}
+{#{% block object-tools-items %}#}
+{#    {{ block.super }}#}
+{#    <li>#}
+{#    <a href="/admin/cmdb/host/{{ object_id }}/refresh" >#}
+{#        <i class="icon-ok-sign icon-alpha75"></i>#}
+{#            刷新 主机#}
+{#    </a>#}
+{#    </li>#}
+{#{% endblock %}#}
+
