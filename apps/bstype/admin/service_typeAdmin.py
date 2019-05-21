@@ -14,7 +14,6 @@ class serviceResource(resources.ModelResource):
 
     class Meta:
         model = service_type
-        fields = ('bussiness', 'name', 'comments', 'update_time')
 
 
 @admin.register(service_type)
