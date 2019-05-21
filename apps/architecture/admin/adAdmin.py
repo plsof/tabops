@@ -1,6 +1,7 @@
 from django.contrib import admin
 from import_export import fields, resources
 from import_export.widgets import ForeignKeyWidget
+# from import_export.widgets import
 from import_export.admin import ImportExportModelAdmin
 
 from architecture.models import ad
@@ -18,9 +19,14 @@ class adResource(resources.ModelResource):
         attribute='bussiness',
         widget=ForeignKeyWidget(bussiness_type, 'name'))
 
+    # 导入时不能区分出对应那个service，暂时service不导入（readonly） 待解决。。。
+    service = fields.Field(column_name='service',
+        attribute='service',
+        widget=ForeignKeyWidget(service_type, 'name'),
+        readonly=True)
+
     class Meta:
         model = ad
-        fields = ('id', 'idc', 'bussiness', 'service', 'ip', 'path', 'port', 'comments', 'create_time', 'update_time')
 
 
 class serviceFilter(admin.SimpleListFilter):
