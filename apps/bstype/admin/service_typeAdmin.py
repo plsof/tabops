@@ -22,4 +22,4 @@ class serviceAdmin(ImportExportModelAdmin):
     resource_class = serviceResource
     list_display = ['bussiness', 'name', 'comments', 'update_time']
     list_filter = ['bussiness']
-
+    ordering = ('name',)
