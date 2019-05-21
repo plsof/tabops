@@ -20,7 +20,7 @@ class dms2Resource(resources.ModelResource):
 
     class Meta:
         model = dms2
-        fields = ('idc', 'bussiness', 'service', 'ip', 'path', 'port', 'comments', 'update_time')
+        fields = ('id', 'idc', 'bussiness', 'service', 'ip', 'path', 'port', 'comments', 'create_time', 'update_time')
 
 
 class serviceFilter(admin.SimpleListFilter):

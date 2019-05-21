@@ -20,7 +20,7 @@ class tptopicResource(resources.ModelResource):
 
     class Meta:
         model = tptopic
-        fields = ('idc', 'bussiness', 'service', 'ip', 'path', 'port', 'comments', 'update_time')
+        fields = ('id', 'idc', 'bussiness', 'service', 'ip', 'path', 'port', 'comments', 'create_time', 'update_time')
 
 
 class serviceFilter(admin.SimpleListFilter):

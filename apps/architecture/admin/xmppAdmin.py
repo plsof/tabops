@@ -20,7 +20,7 @@ class xmppResource(resources.ModelResource):
 
     class Meta:
         model = xmpp
-        fields = ('idc', 'bussiness', 'service', 'ip', 'path', 'port', 'comments', 'update_time')
+        fields = ('id', 'idc', 'bussiness', 'service', 'ip', 'path', 'port', 'comments', 'create_time', 'update_time')
 
 
 class serviceFilter(admin.SimpleListFilter):

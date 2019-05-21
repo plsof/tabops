@@ -20,7 +20,7 @@ class epgResource(resources.ModelResource):
 
     class Meta:
         model = epg
-        fields = ('idc', 'bussiness', 'service', 'ip', 'path', 'port', 'comments', 'update_time')
+        fields = ('id', 'idc', 'bussiness', 'service', 'ip', 'path', 'port', 'comments', 'create_time', 'update_time')
 
 
 class serviceFilter(admin.SimpleListFilter):
