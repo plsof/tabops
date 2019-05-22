@@ -18,11 +18,9 @@ class tptopicResource(resources.ModelResource):
         attribute='bussiness',
         widget=ForeignKeyWidget(bussiness_type, 'name'))
 
-    # 导入时不能区分出对应那个service，暂时service不导入（readonly） 待解决。。。
     service = fields.Field(column_name='service',
         attribute='service',
-        widget=ForeignKeyWidget(service_type, 'name'),
-        readonly=True)
+        widget=ForeignKeyWidget(service_type, 'name'))
 
     class Meta:
         model = tptopic
@@ -55,7 +53,7 @@ class serviceFilter(admin.SimpleListFilter):
 @admin.register(tptopic)
 class tptopicAdmin(ImportExportModelAdmin):
     resource_class = tptopicResource
-    list_display = ['idc', 'bussiness', 'service', 'ip', 'path', 'port', 'update_time']
+    list_display = ['idc', 'service', 'ip', 'path', 'port', 'update_time']
     ordering = ('idc', 'service', 'ip', 'port')
     search_fields = ['ip']
     list_filter = ['idc', serviceFilter]
