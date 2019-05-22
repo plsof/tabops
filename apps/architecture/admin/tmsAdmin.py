@@ -53,7 +53,7 @@ class serviceFilter(admin.SimpleListFilter):
 @admin.register(tms)
 class tmsAdmin(ImportExportModelAdmin):
     resource_class = tmsResource
-    list_display = ['idc', 'service', 'ip', 'path', 'port', 'comments']
+    list_display = ['idc', 'service', 'ip', 'path', 'port', 'update_time']
     ordering = ('idc', 'service', 'ip', 'port')
     search_fields = ['ip']
     list_filter = ['idc', serviceFilter]
