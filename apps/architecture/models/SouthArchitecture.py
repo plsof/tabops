@@ -196,3 +196,9 @@ class ad(BaseArchitecture):
         verbose_name = '广告系统'
         verbose_name_plural = '广告系统'
 
+
+class ndms(BaseArchitecture):
+
+    class Meta:
+        verbose_name = 'NDMS'
+        verbose_name_plural = 'NDMS'

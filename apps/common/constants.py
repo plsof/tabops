@@ -8,3 +8,7 @@ BS_TYPE = (
     (1, 'local')     # 本地
 )
 
+SWARM_ROLE = (
+    (0, 'worker'),
+    (1, 'manager')
+)

@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'bstype',
     'saltapi',
     'dashboard',
+    'kunlun',
     'nested_inline',
     'suit_dashboard',
     'django.contrib.admin.apps.SimpleAdminConfig',
@@ -143,8 +144,9 @@ SUIT_CONFIG = {
     'MENU': (
         {'app': 'cmdb', 'icon': 'icon-leaf',
          'models': ('IDCLevel', 'ISP', 'IDC', 'Cabinet', 'Rack', 'Host')},
+        {'app': 'kunlun', 'icon': 'icon-th-list'},
         {'app': 'architecture', 'icon': 'icon-book',
-         'models': ('wtv', 'bimsboot', 'bimspanel', 'tms', 'epg', 'tptopic', 'pic', 'ppl', 'cosepg', 'nginx', 'bigdata', 'product', 'unionpay', 'lbss', 'exchange', 'sms', 'dangj', 'ub', 'dms2', 'injection', 'ad')},
+         'models': ('wtv', 'bimsboot', 'bimspanel', 'tms', 'epg', 'tptopic', 'pic', 'ppl', 'cosepg', 'nginx', 'bigdata', 'product', 'unionpay', 'lbss', 'exchange', 'sms', 'dangj', 'ub', 'dms2', 'injection', 'ad', 'ndms')},
         {'app': 'bstype', 'icon': 'icon-tags',
          'models': ('bussiness_type', 'service_type',)},
         {'app': 'auth', 'icon': 'icon-lock', 'models': ('user', 'group')},
